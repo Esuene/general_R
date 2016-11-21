@@ -1,6 +1,6 @@
 #https://color.adobe.com/Moodboard-persona-color-theme-8899261/edit/?copy=true&base=3&rule=Custom&selected=3&name=Copy%20of%20Moodboard%20persona&mode=rgb&rgbvalues=0.6980392156862745,0.5725490196078431,0.6352941176470588,1,1,1,1,0.9176470588235294,0.9568627450980393,0.5607843137254902,0.7803921568627451,0.8,0.3607843137254902,0.6784313725490196,0.6980392156862745&swatchOrder=0,1,2,3,4
 
-my_theme <-   {theme(
+#my_theme <-   {theme(
   #Chart region
   panel.background = element_rect(fill = "#FFFFFF"),
   plot.background = element_rect(fill = "#FFEAF4"),
@@ -57,8 +57,8 @@ josi_theme <- function (base_size = 11, base_family = "")
         panel.grid.major = element_line(colour = "#f1d8e0", size = 0.2), 
         panel.grid.minor = element_line(colour = "#f1d8e0", size = 0.15), 
         panel.spacing = unit(half_line, "pt"), 
-        panel.margin.x = NULL, 
-        panel.margin.y = NULL, 
+        panel.spacing.x = NULL, 
+        panel.spacing.y = NULL, 
         panel.ontop = FALSE, 
         # FACETS
         strip.background = element_rect(fill = "#ecddee", colour = NA), 

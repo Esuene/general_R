@@ -67,7 +67,7 @@ speech_sentiment %>% ggplot(aes(index, sentiment)) + geom_bar(stat = "identity")
 speech_bing_count <- inner_join(speech, bing, by = "word") %>% 
     count(word, sentiment, sort = T) %>% ungroup()
 
-speech_bing_count %>% filter(n >= 2) %>% 
+trump <- speech_bing_count %>% filter(n >= 2) %>% 
   mutate(n = ifelse(sentiment == "negative", -n, n)) %>%
   mutate(word = reorder(word, n)) %>% 
   ggplot(aes(word, n, fill = sentiment)) + 
@@ -80,3 +80,5 @@ speech_bing_count %>% filter(n >= 2) %>%
   labs(title = "Donald Trump's Acceptance Speech", 
        subtitle = "(Sentiment Contribution By Word)",
        x = "Word", y = "Sentiment Contribution") 
+
+ggsave("/Users/Josiah/Dropbox/general_R/trump_vs_clinton/trump.png", width = 6, height = 9)
