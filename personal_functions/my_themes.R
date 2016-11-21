@@ -40,7 +40,7 @@ josi_theme <- function (base_size = 11, base_family = "")
         axis.title.y = element_text(angle = 90, margin = margin(r = 0.8 * half_line, l = 0.8 * half_line/2)),
         # LEGEND
         legend.background = element_rect(colour = NA), 
-        legend.margin = unit(0.2, "cm"), 
+        legend.spacing = unit(0.2, "cm"), 
         legend.key = element_rect(fill = "grey95", colour = "white"), 
         legend.key.size = unit(1.2, "lines"), 
         legend.key.height = NULL, 
@@ -56,7 +56,7 @@ josi_theme <- function (base_size = 11, base_family = "")
         panel.border = element_blank(), 
         panel.grid.major = element_line(colour = "#f1d8e0", size = 0.2), 
         panel.grid.minor = element_line(colour = "#f1d8e0", size = 0.15), 
-        panel.margin = unit(half_line, "pt"), 
+        panel.spacing = unit(half_line, "pt"), 
         panel.margin.x = NULL, 
         panel.margin.y = NULL, 
         panel.ontop = FALSE, 
@@ -69,6 +69,8 @@ josi_theme <- function (base_size = 11, base_family = "")
         strip.switch.pad.wrap = unit(0.1, "cm"), 
         # OVERALL PLOT
         plot.background = element_rect(colour = "white"), 
-        plot.title = element_text(size = rel(1.3), margin = margin(b = half_line * 1.2), face = "bold.italic", vjust = 1),
+        plot.title = element_text(size = rel(1.3), margin = margin(b = half_line * 1.2), 
+                                  face = "bold.italic", vjust = .35),
+        plot.subtitle = element_text(size = rel(1.15), face = "italic", vjust = 1.75),
         plot.margin = margin(half_line, half_line, half_line, half_line), complete = TRUE)
 }
